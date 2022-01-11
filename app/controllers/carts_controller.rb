@@ -1,7 +1,8 @@
 class CartsController < ApplicationController
 
   def show
-    if !@enhanced_cart
+    puts "from controller #{enhanced_cart}"
+    if enhanced_cart.empty?
       render 'empty'
     else
       render 'show'

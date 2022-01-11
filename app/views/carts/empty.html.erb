@@ -5,11 +5,8 @@
   </header>
 
   <div class="panel panel-default items">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th colspan="2">Your cart is empty</th>
-        </tr>
-      </thead>      
-    </table>
+    <div class="alert alert-info" id="empty-cart" role="alert">
+    Your cart is empty
+    </div>
+    <%= link_to 'Return to home', root_path %>
   </div>
