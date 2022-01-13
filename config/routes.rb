@@ -21,6 +21,15 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
 
+  get '/signup' => 'user#new'
+  post '/users' => 'user#create'
+
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
