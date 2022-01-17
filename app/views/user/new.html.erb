@@ -1,20 +1,28 @@
 <h1>Signup!</h1>
 <%= form_for(:user, url: '/users', html:{class: "form-group"}) do |f| %>
   <label>
-  First Name: <%= f.text_field :first_name, class: "form-control", label:"first_name" %>
+  First Name:
   </label>
+  <%= f.text_field :first_name, class: "form-control"%>
+  
   <label>
-  Last Name: <%= f.text_field :last_name, class: "form-control", label:"last_name" %>
-  </label>  
+  Last Name:</label>
+  <%= f.text_field :last_name, class: "form-control"%>
   <label>
-  Email: <%= f.text_field :email, class: "form-control", label:"email" %>
+  Email: 
   </label>
+  <%= f.text_field :email, class: "form-control"%>
+  
   <label>
-  Password: <%= f.password_field :password, class: "form-control", label:"password" %>
+  Password: 
   </label>
+  <%= f.password_field :password, class: "form-control"%>
+  
   <label>
-  Password Confirmation: <%= f.password_field :password_confirmation, class: "form-control", label:"password-confirmation" %>
+  Password Confirmation:
   </label>
+  <%= f.password_field :password_confirmation, class: "form-control"%>
+  
   <label>
   <%= f.submit "Submit", class: "btn btn-primary", id: "user-signup-form" %>
   </label>
