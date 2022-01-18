@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <%= user.first_name %>
+  </td>
+  <td>
+    <%= user.email %>
+  </td>
+  <td>
+    <%= link_to 'Delete', [:admin, user], method: :delete, class: 'btn btn-danger' %>
+
+  </td>
+</tr>

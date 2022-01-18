@@ -1,0 +1,26 @@
+<section class="admin-products-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; All Users</h1>
+  </header>
+
+    <div class="panel panel-default users">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th> Email</th>
+          <th>Delete</th>
+        </tr>        
+      </thead>
+         <tbody>
+        <% @users.each do |user| %>
+          <%= render 'user', user: user %>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</section>
