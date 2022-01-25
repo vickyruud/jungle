@@ -5,6 +5,11 @@ class Admin::UsersController < ApplicationController
     @users = User.order(id: :desc).all
   end
 
+  def show
+    @user = User.find params[:id]    
+  end
+
+
   def destroy
     @user = User.find params[:id]
     if @user != current_user

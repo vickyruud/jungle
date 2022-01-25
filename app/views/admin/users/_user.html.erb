@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= user.first_name %>
+    <%= link_to user.first_name, "/admin/users/{:id}"%>
   </td>
   <td>
     <%= user.email %>
