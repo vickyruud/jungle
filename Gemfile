@@ -28,6 +28,12 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
 
+# Use rspec for testing
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  # ...
+end
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'money-rails'
