@@ -64,3 +64,10 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
+
+#testing gems
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
