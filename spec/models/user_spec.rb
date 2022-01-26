@@ -113,6 +113,16 @@ RSpec.describe User, type: :model do
       #Incorrect email should not allow it to login
       expect(User.authenticate_with_credentials("jamesmay1@gmail.com", "password")).not_to be_present
     end
+     it 'should not login if password is incorrect' do
+      @user = User.new(first_name: "James",
+      last_name: "May",
+      email: "jamesmay@gmail.com",
+      password: "password",
+      password_confirmation: "password")
+      @user.save!
+      #Incorrect email should not allow it to login
+      expect(User.authenticate_with_credentials("jamesmay@gmail.com", "Password")).not_to be_present
+    end
     it 'should login if email has spaces' do
       @user = User.new(first_name: "James",
       last_name: "May",
