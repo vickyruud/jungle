@@ -139,6 +139,7 @@ RSpec.describe User, type: :model do
       email: "jamesmay@gmail.com",
       password: "password",
       password_confirmation: "password")
+      
       @user.save!
       expect(User.authenticate_with_credentials(" jaMeSmAY@gmail.com ", "password")).to be_present
 
